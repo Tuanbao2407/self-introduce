@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "fetch-audio": "node scripts/fetch-audio.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
