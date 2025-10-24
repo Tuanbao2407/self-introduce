@@ -1,0 +1,250 @@
+/* Import Tailwind */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --marshall-black: #0F0F0F;
+  --marshall-gold: #CBA135;
+  --marshall-gold-light: #E5BE4D;
+  --marshall-gold-dark: #A88929;
+  --marshall-gray: #2C2C2C;
+  --marshall-gray-light: #3D3D3D;
+  --marshall-gray-dark: #1A1A1A;
+  --marshall-white: #F5F5F5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-marshall-black);
+  color: var(--color-marshall-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-oswald);
+  color: var(--color-marshall-gold);
+}
+
+/* Marshall Components */
+.marshall-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--color-marshall-gold);
+  color: var(--color-marshall-black);
+  font-family: var(--font-oswald);
+  border-radius: 0.25rem;
+  transition: all 300ms ease;
+}
+
+.marshall-button:hover {
+  background-color: rgb(229, 190, 77); /* marshallGoldLight */
+  transform: translateY(-1px);
+}
+
+.marshall-card {
+  position: relative;
+  background-color: rgb(44, 44, 44); /* marshallGray */
+  border: 1px solid var(--color-marshall-gold);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 300ms ease;
+}
+
+.marshall-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(203, 161, 53, 0.1);
+}
+
+.marshall-input {
+  width: 100%;
+  background-color: rgb(61, 61, 61); /* marshallGrayLight */
+  border: 1px solid rgb(44, 44, 44); /* marshallGray */
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  color: var(--color-marshall-white);
+  transition: all 300ms ease;
+}
+
+.marshall-input:focus {
+  border-color: var(--color-marshall-gold);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(203, 161, 53, 0.2);
+}
+
+.marshall-section {
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+.marshall-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.marshall-heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+  font-family: var(--font-oswald);
+  color: var(--color-marshall-gold);
+  margin-bottom: 2rem;
+  letter-spacing: 0.025em;
+}
+
+.marshall-subheading {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.4;
+  font-family: var(--font-oswald);
+  color: rgb(229, 190, 77); /* marshallGoldLight */
+  margin-bottom: 1.5rem;
+}
+
+/* Marshall Utilities */
+.text-gradient-marshall {
+  position: relative;
+  background: linear-gradient(to right, var(--color-marshall-gold), rgb(168, 137, 41));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.border-gradient-marshall {
+  position: relative;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, var(--color-marshall-gold), rgb(168, 137, 41));
+}
+
+/* Animation Utilities */
+.hover-lift {
+  transition: transform 300ms ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.hover-glow {
+  transition: box-shadow 300ms ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(203, 161, 53, 0.3);
+}
+
+/* Marshall Responsive */
+@media (min-width: 640px) {
+  .marshall-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .marshall-container {
+    padding: 0 2rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(15, 15, 15); /* marshallBlack */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(44, 44, 44); /* marshallGray */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-marshall-gold);
+}
+
+/* Animation Keyframes */
+@keyframes shine {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* New Utility Classes */
+.hover-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-shine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+.group:hover .hover-shine::after {
+  animation: shine 1.5s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Base Elements */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--marshall-black);
+  color: var(--marshall-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--marshall-gold);
+  font-family: var(--font-oswald);
+}
+
+p {
+  color: var(--marshall-white);
+  font-family: var(--font-inter);
+}
