@@ -21,7 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${oswald.variable} ${inter.variable} bg-marshallBlack text-marshallWhite`}>
+      <body
+        className={`${oswald.variable} ${inter.variable} bg-marshallBlack text-marshallWhite`}
+      >
         {children}
       </body>
     </html>

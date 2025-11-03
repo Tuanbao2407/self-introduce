@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 export default function ContactForm() {
   const handleSubmit = (e) => {
@@ -10,7 +10,9 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <div>
-          <label htmlFor="name" className="block text-marshallGold mb-1">Họ và tên</label>
+          <label htmlFor="name" className="block text-marshallGold mb-1">
+            Họ và tên
+          </label>
           <input
             type="text"
             id="name"
@@ -20,7 +22,9 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-marshallGold mb-1">Địa chỉ email</label>
+          <label htmlFor="email" className="block text-marshallGold mb-1">
+            Địa chỉ email
+          </label>
           <input
             type="email"
             id="email"
@@ -31,7 +35,9 @@ export default function ContactForm() {
         </div>
       </div>
       <div className="mb-4">
-        <label htmlFor="subject" className="block text-marshallGold mb-1">Chủ đề</label>
+        <label htmlFor="subject" className="block text-marshallGold mb-1">
+          Chủ đề
+        </label>
         <input
           type="text"
           id="subject"
@@ -41,7 +47,9 @@ export default function ContactForm() {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="message" className="block text-marshallGold mb-1">Tin nhắn</label>
+        <label htmlFor="message" className="block text-marshallGold mb-1">
+          Tin nhắn
+        </label>
         <textarea
           id="message"
           rows="4"

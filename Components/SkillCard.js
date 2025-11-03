@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 export default function SkillCard({ name, level, icon }) {
   return (
@@ -26,10 +26,14 @@ export default function SkillCard({ name, level, icon }) {
         <div className="w-full h-2 bg-marshallBlack rounded-full overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
-            <div className="w-full h-full" style={{
-              backgroundImage: 'repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 1px, transparent 1px, transparent 50%)',
-              backgroundSize: '8px 8px'
-            }}></div>
+            <div
+              className="w-full h-full"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 1px, transparent 1px, transparent 50%)",
+                backgroundSize: "8px 8px",
+              }}
+            ></div>
           </div>
 
           {/* Progress Bar */}
@@ -37,7 +41,8 @@ export default function SkillCard({ name, level, icon }) {
             className="h-full rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
             style={{
               width: `${level}%`,
-              background: 'linear-gradient(90deg, var(--marshall-gold) 0%, var(--marshall-gold-light) 100%)'
+              background:
+                "linear-gradient(90deg, var(--marshall-gold) 0%, var(--marshall-gold-light) 100%)",
             }}
           >
             {/* Shine Effect */}

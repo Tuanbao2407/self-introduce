@@ -4,14 +4,14 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --marshall-black: #0F0F0F;
-  --marshall-gold: #CBA135;
-  --marshall-gold-light: #E5BE4D;
-  --marshall-gold-dark: #A88929;
-  --marshall-gray: #2C2C2C;
-  --marshall-gray-light: #3D3D3D;
-  --marshall-gray-dark: #1A1A1A;
-  --marshall-white: #F5F5F5;
+  --marshall-black: #0f0f0f;
+  --marshall-gold: #cba135;
+  --marshall-gold-light: #e5be4d;
+  --marshall-gold-dark: #a88929;
+  --marshall-gray: #2c2c2c;
+  --marshall-gray-light: #3d3d3d;
+  --marshall-gray-dark: #1a1a1a;
+  --marshall-white: #f5f5f5;
 }
 
 html {
@@ -23,7 +23,12 @@ body {
   color: var(--color-marshall-white);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-oswald);
   color: var(--color-marshall-gold);
 }
@@ -106,7 +111,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Marshall Utilities */
 .text-gradient-marshall {
   position: relative;
-  background: linear-gradient(to right, var(--color-marshall-gold), rgb(168, 137, 41));
+  background: linear-gradient(
+    to right,
+    var(--color-marshall-gold),
+    rgb(168, 137, 41)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -116,7 +125,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   border: 2px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, var(--color-marshall-gold), rgb(168, 137, 41));
+  border-image-source: linear-gradient(
+    to right,
+    var(--color-marshall-gold),
+    rgb(168, 137, 41)
+  );
 }
 
 /* Animation Utilities */
@@ -178,7 +191,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
   }
   50% {
@@ -187,7 +201,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -202,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hover-shine::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -239,7 +254,12 @@ body {
   color: var(--marshall-white);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--marshall-gold);
   font-family: var(--font-oswald);
 }

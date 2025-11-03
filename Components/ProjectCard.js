@@ -1,6 +1,13 @@
-'use client';
+"use client";
 
-export default function ProjectCard({ title, description, technologies, image, demoLink, codeLink }) {
+export default function ProjectCard({
+  title,
+  description,
+  technologies,
+  image,
+  demoLink,
+  codeLink,
+}) {
   return (
     <div className="marshall-card group">
       <div className="relative h-48 rounded-lg overflow-hidden mb-4">
@@ -18,7 +25,12 @@ export default function ProjectCard({ title, description, technologies, image, d
               className="marshall-button inline-flex items-center space-x-2"
             >
               <span>Demo</span>
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <svg
+                className="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <path d="M15 3h6v6"></path>
                 <path d="M10 14L21 3"></path>
@@ -31,7 +43,12 @@ export default function ProjectCard({ title, description, technologies, image, d
               className="marshall-button inline-flex items-center space-x-2"
             >
               <span>Code</span>
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <svg
+                className="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
                 <path d="M8 3L2 9l6 6M16 3l6 6-6 6"></path>
               </svg>
             </a>
@@ -39,8 +56,12 @@ export default function ProjectCard({ title, description, technologies, image, d
         </div>
       </div>
       <div className="p-4">
-        <h3 className="text-xl font-heading text-gradient-marshall mb-3">{title}</h3>
-        <p className="text-marshallWhite/90 mb-6 leading-relaxed">{description}</p>
+        <h3 className="text-xl font-heading text-gradient-marshall mb-3">
+          {title}
+        </h3>
+        <p className="text-marshallWhite/90 mb-6 leading-relaxed">
+          {description}
+        </p>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <span
